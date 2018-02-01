@@ -1,15 +1,21 @@
+# Our route configuration -- DUDE
 Rails.application.routes.draw do
+
+
   namespace :site do
-    get 'home/index'
+    get 'home', to:'home#index'
   end
+
+  get 'backoffice', to: 'backoffice/dashboard#index'
 
   namespace :backoffice do
-    get 'dashboard/index'
+    get 'dashboard', to: 'dashboard#index'
   end
 
-  devise_for :admins
-  devise_for :members
-  get 'home/index'
+
   root 'site/home#index'
 
+  devise_for :admins
+
+  devise_for :members
 end
