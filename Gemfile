@@ -4,9 +4,11 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem 'rails-assets-jquery', source: 'https://rails-assets.org'
+# jquery
+gem 'rails-assets-jquery', source: 'http://insecure.rails-assets.org'
 # Assets for bootstrap layout
-gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+gem 'rails-assets-bootstrap', source: 'http://insecure.rails-assets.org'
+
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
 
