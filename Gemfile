@@ -5,9 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 # jquery
-gem 'rails-assets-jquery', source: 'http://insecure.rails-assets.org'
+gem 'rails-assets-jquery', source: 'https://rails-assets.org'
+# A simple, versatile notification library
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 # Assets for bootstrap layout
-gem 'rails-assets-bootstrap', source: 'http://insecure.rails-assets.org'
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
