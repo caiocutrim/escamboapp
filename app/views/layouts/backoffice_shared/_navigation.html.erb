@@ -34,7 +34,7 @@
 		<!-- /.dropdown -->
 	</ul>
 	<!-- /.navbar-top-links -->
-
+	<!-- sidebar -->
 	<div class="navbar-default sidebar" role="navigation">
 		<div class="sidebar-nav navbar-collapse">
 			<ul class="nav" id="side-menu">
@@ -46,6 +46,11 @@
 				<li>
 					<%= link_to backoffice_categories_path do %>
 						<i class="fa fa-th-list fa-fw"></i> Categories
+					<% end %>
+				</li>
+				<li>
+					<%= link_to backoffice_admins_index_path do %>
+						<i class="fa fa-users fa-fw"></i> Administradores
 					<% end %>
 				</li>
 			</ul>
