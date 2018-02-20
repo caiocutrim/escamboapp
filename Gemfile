@@ -4,20 +4,25 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-# jquery
-gem 'rails-assets-jquery', source: 'https://rails-assets.org'
+
 # Ruby on Rails unobtrusive scripting adapter for jQuery
 gem 'jquery-rails'
-# A simple, versatile notification library
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
-# Assets for bootstrap layout
-gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 
+source 'https://rails-assets.org' do 
+	# Jquery
+	gem 'rails-assets-jquery'
+	# Wrappers for JavaScript alert(), confirm() and other flexible dialogs using Twitter's bootstrap framework http://bootboxjs.com
+	gem 'rails-assets-bootbox'
+	# A simple, versatile notification library
+	gem 'rails-assets-notifyjs'
+	# Assets for bootstrap layout
+	gem 'rails-assets-bootstrap'
+end
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
-
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 gem 'devise-i18n'
