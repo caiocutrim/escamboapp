@@ -4,8 +4,12 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # jquery
 gem 'rails-assets-jquery', source: 'https://rails-assets.org'
+# Ruby on Rails unobtrusive scripting adapter for jQuery
+gem 'jquery-rails'
 # A simple, versatile notification library
 gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 # Assets for bootstrap layout

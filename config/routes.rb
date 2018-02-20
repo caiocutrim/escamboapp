@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'backoffice', to: 'backoffice/dashboard#index'
   namespace :backoffice do
-  	resources :admins, expect: [:show, :destroy]
+  	resources :admins, except: [:show]
     resources :categories, except: [:show, :destroy]
     get 'dashboard', to: 'dashboard#index'
   end
