@@ -4,31 +4,18 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
-
-# A library for generating fake data such as names, addresses, and phone numbers.
-gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-
-# Ruby on Rails unobtrusive scripting adapter for jQuery
-gem 'jquery-rails'
-
-# Sweet alert integration
-gem 'sweet-alert2-rails'
-source 'https://rails-assets.org' do 
-	# A simple, versatile notification library
-	gem 'rails-assets-notifyjs'
-	# Assets for bootstrap layout
-	gem 'rails-assets-bootstrap'
-	# Sweet alert for rails -- which is awesome
-	gem 'rails-assets-sweetalert2'
-end
+gem 'rails-assets-jquery', source: 'https://rails-assets.org'
+# Assets for bootstrap layout
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 # Rails gem of the Bootstrap based admin theme SB Admin 2. http://dreamingechoes.github.io/boots…
 gem 'bootstrap_sb_admin_base_v2'
+
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 gem 'devise-i18n'
 
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.1.4'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
