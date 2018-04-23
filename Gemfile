@@ -4,6 +4,10 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.1.4'
+
+gem 'jquery-rails'
 gem 'rails-assets-jquery', source: 'https://rails-assets.org'
 # Assets for bootstrap layout
 gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
@@ -13,9 +17,9 @@ gem 'bootstrap_sb_admin_base_v2'
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 gem 'devise-i18n'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+# A Rails confirm replacement with SweetAlert
+gem 'sweet-alert'
+gem 'sweet-alert-confirm'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
@@ -60,7 +64,7 @@ group :development do
 
   # Better error page for Rack apps
   gem 'better_errors'
-  # Starts a server in development mode based on Procfile 
+  # Starts a server in development mode based on Procfile
   gem 'foreman'
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
