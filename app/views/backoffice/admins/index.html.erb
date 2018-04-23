@@ -17,6 +17,7 @@
 					<thead>
 						<tr>
 							<th>#</th>
+							<th>Nome</th>
 							<th>Descrição</th>
 						</tr>
 					</thead>
@@ -26,6 +27,9 @@
 								<td> <%= admin.id %> </td>
 								<td>
 									<%= admin.email %>
+								</td>
+								<td>
+									<%= admin.name %>
 								</td>
 								<td style="width:150px;">
 									<%= link_to edit_backoffice_admin_path(admin),

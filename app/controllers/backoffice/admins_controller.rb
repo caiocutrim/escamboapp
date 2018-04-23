@@ -12,7 +12,7 @@ class Backoffice::AdminsController < BackofficeController
 	end
 
 	def create
-		@admin = Admin.new(params_admin)	
+		@admin = Admin.new(params_admin)
 		if @admin.save
 			redirect_to backoffice_admins_path, notice: "O adminstrador (#{@admin.email}) foi criado"
 		else
@@ -27,7 +27,7 @@ class Backoffice::AdminsController < BackofficeController
 		passwd = params[:admin][:password]
 		passwd_confirmation = params[:admin][:password_confirmation]
 		if passwd.blank? && passwd_confirmation.blank?
-			params[:admin].delete(:password) 
+			params[:admin].delete(:password)
 			params[:admin].delete(:password_confirmation)
 		end
 		if @admin.update(params_admin)
@@ -51,6 +51,6 @@ class Backoffice::AdminsController < BackofficeController
 			@admin = Admin.find(params[:id])
 		end
 		def params_admin
-			params.require(:admin).permit(:email, :password, :password_confirmation)
+			params.require(:admin).permit(:name, :email, :password, :password_confirmation)
 		end
 end

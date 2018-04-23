@@ -17,9 +17,8 @@ gem 'bootstrap_sb_admin_base_v2'
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/…
 gem 'devise'
 gem 'devise-i18n'
-# A Rails confirm replacement with SweetAlert
-gem 'sweet-alert'
-gem 'sweet-alert-confirm'
+gem 'bootstrap-modal-rails'
+gem 'data-confirm-modal', '~> 1.6', '>= 1.6.2'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
@@ -68,6 +67,8 @@ group :development do
   gem 'foreman'
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
