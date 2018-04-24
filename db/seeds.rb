@@ -28,5 +28,7 @@ Admin.create!(
   email: "admin@admin.com",
   name: "Admin",
   password: "secret",
-  password_confirmation: "secret")
+  password_confirmation: "secret",
+  role: 0
+)
 puts "Cadastrando o adminstrador padrao [Ok]..."

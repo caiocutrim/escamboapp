@@ -7,7 +7,8 @@ namespace :utils do
 			Admin.create!(email: Faker::Internet.email,
                     name: Faker::Name.name,
 										password: "123456",
-										password_confirmation: "123456"
+										password_confirmation: "123456",
+                    role: [0,0,1,1,1].sample
 									 )
 		end
 		puts "Cadastrando o adminstradores...[ok]"
